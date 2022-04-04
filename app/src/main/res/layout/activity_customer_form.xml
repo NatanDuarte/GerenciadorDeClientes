@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:theme="@style/Theme.GerenciadorDeClientes"
+    tools:context=".ui.activity.CustomerForm">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/deep_blue_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Nome"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_field_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Telefone"
+            android:textColorHint="@color/white"
+            app:counterEnabled="true"
+            app:counterMaxLength="14"
+            app:layout_constraintEnd_toEndOf="@id/name_field_outline"
+            app:layout_constraintStart_toStartOf="@id/name_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/name_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="E-mail"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/phone_field_outline"
+            app:layout_constraintStart_toStartOf="@id/phone_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/phone_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/street_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:hint="Logradouro"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/email_field_outline"
+            app:layout_constraintStart_toStartOf="@id/email_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/email_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/street_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textCapWords"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_number_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Número"
+            android:minWidth="120dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/street_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/street_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/address_number_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cep_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="CEP"
+            android:textColorHint="@color/white"
+            app:counterEnabled="true"
+            app:counterMaxLength="8"
+            app:layout_constraintEnd_toEndOf="@id/street_field_outline"
+            app:layout_constraintStart_toEndOf="@id/address_number_field_outline"
+            app:layout_constraintTop_toTopOf="@id/address_number_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cep_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Bairro"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/cep_field_outline"
+            app:layout_constraintStart_toStartOf="@id/address_number_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/address_number_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/district_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/district_complement_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Complemento"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/district_field_outline"
+            app:layout_constraintStart_toStartOf="@id/district_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/district_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/district_complement_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Cidade"
+            android:minWidth="150dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/district_complement_field_outline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/district_complement_field_outline"
+            app:layout_constraintTop_toBottomOf="@id/district_complement_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/city_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/state_field_outline"
+            style="@style/CustomOutlineBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:hint="Estado"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/district_complement_field_outline"
+            app:layout_constraintStart_toEndOf="@id/city_field_outline"
+            app:layout_constraintTop_toTopOf="@id/city_field_outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/state_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

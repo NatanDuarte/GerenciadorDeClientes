@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="deep_blue">#001534</color>
+    <color name="medium_deep_blue">#00285B</color>
+    <color name="light_deep_blue">#163E71</color>
+    <color name="neon_blue">#0E56AD</color>
+    <color name="neon_green">#A3FFBF</color>
+</resources>
