@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GerenciadorDeClientes</string>
+    <string name="app_name">Gerenciador De Clientes</string>
     <string name="required_field_error_message">Campo obrigatório: preencha corretamente</string>
     <string name="remove">remover</string>
     <string name="confirm">confirmar</string>
